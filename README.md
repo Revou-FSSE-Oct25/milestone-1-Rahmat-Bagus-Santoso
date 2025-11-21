@@ -17,3 +17,21 @@ Proyek ini adalah website portofolio sederhana yang dibangun menggunakan **HTML5
 ## Tech
 **HTML5**
 **CSS**
+
+# Documentation - ver 2
+
+## Overview
+Proyek ini ada website portofolio sederhana versi 2 yang dibangun menggunakan **Html** dan **External CSS**
+
+## Feature
+- Responsive layout (Mobile-First - Tablet/Desktop)
+- Modular CSS (Global - per page CSS)
+- Flexbox layout
+
+## Pages
+- Index
+- About
+- Project
+- Contact
+
+## Screenshoot
