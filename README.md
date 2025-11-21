@@ -36,3 +36,7 @@ Proyek ini ada website portofolio sederhana versi 2 yang dibangun menggunakan **
 
 ## Screenshoot
 ### Mobile
+![Screenshoot mobile layout](https://github.com/Revou-FSSE-Oct25/milestone-1-Rahmat-Bagus-Santoso/blob/main/asset/image/mobile.JPG)
+
+### Desktop
+![Screenshoot Desktop Layout](https://github.com/Revou-FSSE-Oct25/milestone-1-Rahmat-Bagus-Santoso/blob/main/asset/image/desktop.JPG)
