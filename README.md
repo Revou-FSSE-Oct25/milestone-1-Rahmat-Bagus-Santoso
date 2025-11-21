@@ -35,3 +35,4 @@ Proyek ini ada website portofolio sederhana versi 2 yang dibangun menggunakan **
 - Contact
 
 ## Screenshoot
+### Mobile
