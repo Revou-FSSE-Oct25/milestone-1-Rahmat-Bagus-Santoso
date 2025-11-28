@@ -3,117 +3,369 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="This is a personal portfolio HTML document."
-    />
-    <meta
-      name="keywords"
-      content="HTML, External CSS, Portfolio, mobile-first design"
-    />
-    <title>Bagus's Portfolio</title>
-    <link rel="icon" href="./asset/icon/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="./asset/css/global.css" />
-    <link rel="stylesheet" href="./asset/css/home.css" />
-    <!-- <script src="./asset/js/script.js"></script> -->
+    <meta name="description" content="Personal portfolio website" />
+    <meta name="keywords" content="Portfolio, responsive design" />
+    <title>Rahmat Bagus Santoso</title>
+    <link rel="icon" href="./assets/icon/favicon.png" type="image/png" />
+    <script>
+      window.tailwind = window.tailwind || {};
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: "#2563eb",
+              subtle: "#f8fafc",
+            },
+            fontFamily: {
+              heading: ["Poppins", "system-ui", "sans-serif"],
+              body: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
-  <body>
+
+  <body class="bg-subtle">
     <!-- Header -->
-    <header class="header container">
-      <h1 class="logo">
-        <a href="">Rahmat Bagus Santoso</a>
-      </h1>
+    <header class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-16">
+        <h1 class="text-lg font-semibold">
+          <a href="./index.html" class="text-gray-900 no-underline">Rahmat Bagus Santoso</a>
+        </h1>
 
-      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="hamburger" aria-label="Menu"
-        >&equiv;</label
-      >
+        <input type="checkbox" id="menu-toggle" class="peer hidden" />
+        <label
+          for="menu-toggle"
+          class="p-2 rounded-md inline-flex items-center justify-center text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-accent md:hidden"
+        >
+          <i class="fa fa-bars text-2xl"></i>
+        </label>
 
-      <nav id="menu-nav" class="menu-nav" aria-label="Main navigation">
-        <ul class="menu-items">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="./pages/about.html">About</a></li>
-          <li><a href="./pages/project.html">Project</a></li>
-          <li><a href="./pages/contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <nav
+          aria-label="Main navigation"
+          class="absolute left-0 right-0 top-16 bg-white/95 border-t border-gray-100 shadow-sm p-4 transform scale-y-0 origin-top transition-all duration-150 ease-out peer-checked:scale-y-100 md:static md:scale-y-100 md:bg-transparent md:shadow-none md:p-0 md:flex md:items-center md:border-none"
+        >
+          <ul class="space-y-2 md:space-y-0 md:space-x-4 md:flex md:flex-row text-gray-700">
+            <li><a href="#about" class="block px-3 py-2 rounded-md hover:bg-gray-100">About</a></li>
+            <li><a href="#projects" class="block px-3 py-2 rounded-md hover:bg-gray-100">Project</a></li>
+            <li><a href="#blog" class="block px-3 py-2 rounded-md hover:bg-gray-100">Blog</a></li>
+            <li><a href="#contact" class="block px-3 py-2 rounded-md hover:bg-gray-100">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container">
-      <section id="top" class="hero">
-        <figure class="figure">
-          <img
-            src="asset/image/rbs.jpg"
-            alt="Rahmat Bagus Santoso"
-            class="profile-image"
-          />
-        </figure>
-        <article class="content">
-          <h2 class="title">Halo, saya <strong>bagus</strong></h2>
-          <p class="paragraph">
-            saat ini saya adalah murid di salah satu program RevoU, saya
-            mengikuti kelas Full-Stack Software Engineering. saya sedang belajar
-            membuat sebuah website menggunakan HTML + CSS.
-          </p>
+    <main class="bg-subtle font-body">
+      <section id="home" class="hero relative overflow-hidden">
+        <div class="hero-overlay absolute inset-0 pointer-events-none"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-32">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <article class="md:col-span-12 lg:col-span-8 space-y-6 text-white">
+              <h2 class="text-md text-accent uppercase tracking-wider opacity-90">Hi, I'm <strong>Bagus</strong></h2>
+              <p class="text-base md:text-lg max-w-2xl">
+                a student of full-stack development. I learn to design and develop websites, accessible websites using modern HTML, CSS and lightweight tooling.
+                I'm focused on readable UI, good performance, and code that's easy to maintain.
+              </p>
+
+              <nav aria-label="Social links" class="flex items-center space-x-4">
+                <a
+                  href="https://www.linkedin.com/in/rahmat-bagus-santoso-79a58038b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center p-3 rounded-md bg-white/75 border border-gray-200 shadow-sm hover:shadow-md transition"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fa fa-linkedin fa-lg text-gray-700" aria-hidden="true"></i>
+                  <span class="sr-only">LinkedIn</span>
+                </a>
+
+                <a
+                  href="https://github.com/rahmat-bagus-santoso"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center p-3 rounded-md bg-white/75 border border-gray-200 shadow-sm hover:shadow-md transition"
+                  aria-label="GitHub"
+                >
+                  <i class="fa fa-github fa-lg text-gray-700" aria-hidden="true"></i>
+                  <span class="sr-only">GitHub</span>
+                </a>
+              </nav>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="max-w-7xl mx-auto px-4 border-b border-gray-200 md:px-6 py-12">
+        <header class="mb-8">
+          <h2 class="text-2xl md:text-3xl font-heading text-gray-900">About Me</h2>
+        </header>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-2 items-center mb-10">
+          <figure class="mx-auto md:col-span-4 flex items-center justify-center md:justify-start">
+            <img
+              src="./assets/images/rbs.jpg"
+              alt="rahmat-bagus-santoso"
+              loading="lazy"
+              class="w-36 h-36 md:w-72 md:h-72 rounded-full md:rounded-xl object-cover shadow-lg"
+            />
+          </figure>
+
+          <article class="md:col-span-7 space-y-4">
+            <p class="text-base md:text-lg text-gray-700">
+              I am a learner who is continuously growing in the field of information technology. I previously studied Informatics Engineering and have worked in
+              several roles that strengthened my understanding of the IT world.
+            </p>
+
+            <p class="text-gray-700">
+              I am currently enrolled in a <strong>Full Stack Software Engineering</strong> program to deepen my web development skills. I enjoy creating
+              useful, minimal, and user-friendly applications, and want to continue improving in the world of technology.
+            </p>
+          </article>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          <article class="md:col-span-2 bg-white rounded-xl p-6 shadow-md">
+            <h2 class="text-2xl md:text-3xl font-heading text-gray-900 border-l-4 border-gray-500 pl-2 bg-gray-50">Experience</h2>
+            <h3 class="text-xl text-gray-900 my-2">IT Support (Part-Time)</h3>
+            <p class="text-gray-700 mt-3">
+              During my time as an IT Support technician, I handled various technical issues and assisted users with hardware and network problems. This
+              experience trained me to think systematically and find solutions efficiently.
+            </p>
+            <h3 class="text-xl text-gray-900 my-2">Network Operations Center (NOC)</h3>
+            <p class="text-gray-700 mt-3">
+              Additionally, my experience as a field technician at an ISP taught me the importance of accuracy, responsibility, and direct communication with
+              customers.
+            </p>
+          </article>
+
+          <div class="md:col-span-1 flex flex-col gap-6">
+            <article class="bg-white rounded-xl p-5 shadow-md">
+              <h4 class="text-lg font-medium text-gray-900">Current Learning</h4>
+              <p class="text-gray-700 mt-2">I am studying Full Stack Software Engineering and focusing on building clean, reliable, and simple interfaces.</p>
+            </article>
+
+            <article class="bg-white rounded-xl p-5 shadow-md">
+              <h4 class="text-lg font-medium text-gray-900">Focus studying</h4>
+              <ul class="mt-2 list-disc list-inside text-gray-700">
+                <li>Front-End: HTML, CSS and JavaScript Basic</li>
+                <li>Frameworks: React, Tailwind CSS</li>
+                <li>Back-End: Node.js, Express, and MongoDB</li>
+                <li>Version Control: Git, GitHub and CI/CD workflows with GitHub Actions</li>
+                <li>Soft Skills: Communication, teamwork, and problem-solving</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="max-w-7xl mx-auto px-4 md:px-6 py-16 border-b border-gray-200">
+        <header class="mb-8">
+          <h2 class="text-2xl md:text-3xl font-heading text-gray-900">Projects</h2>
+        </header>
+
+        <article class="flex flex-col gap-6 mb-10 md:grid md:grid-cols-3">
+          <div class="bg-white rounded-xl p-4 shadow-md flex flex-col md:flex-row items-start text-center md:text-left">
+            <div class="w-24 h-24 mx-auto md:flex-shrink-0 mb-4 md:mb-0 md:mr-4">
+              <img src="./assets/icon/git-collab.png" alt="Git Collaboration - Breakout Team 8 Thumbnail" class="w-full h-full rounded-md object-contain" />
+            </div>
+
+            <div class="flex flex-col gap-4 flex-1 min-w-0">
+              <h3 class="my-auto text-xl font-medium text-gray-900">Git Collaboration - Breakout Team 8</h3>
+              <p class="text-gray-700 mt-2">This project is a collaborative project using Git with Breakout Team 8.</p>
+              <a
+                href="#"
+                class="mt-4 bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 text-sm inline-block md:self-start self-center"
+                target="_blank"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-4 shadow-md flex flex-col md:flex-row items-start text-center md:text-left">
+            <div class="w-24 h-24 mx-auto md:flex-shrink-0 mb-4 md:mb-0 md:mr-4">
+              <img src="./assets/icon/ecosimp.png" alt="EcoSim - Forest Ecosystem Simulator Thumbnail" class="w-full h-full rounded-md object-contain" />
+            </div>
+
+            <div class="flex flex-col gap-4 flex-1 min-w-0">
+              <h3 class="my-auto text-xl font-medium text-gray-900">EcoSim - Forest Ecosystem Simulator</h3>
+              <p class="text-gray-700 mt-2">
+                A desktop application simulating a dynamic forest ecosystem. It models plant growth, animal behavior , and environmental factors like weather
+                and wildfires.
+              </p>
+              <a
+                href="#"
+                class="mt-4 bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 text-sm inline-block md:self-start self-center"
+                target="_blank"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-4 shadow-md flex flex-col md:flex-row items-start text-center md:text-left">
+            <div class="w-24 h-24 mx-auto md:flex-shrink-0 mb-4 md:mb-0 md:mr-4">
+              <img
+                src="./assets/icon/lingua.png"
+                alt="LinguaLeap - Interactive Language Learning Platform Thumbnail"
+                class="w-full h-full rounded-md object-contain"
+              />
+            </div>
+
+            <div class="flex flex-col gap-4 flex-1 min-w-0">
+              <h3 class="my-auto text-xl font-medium text-gray-900">LinguaLeap - Interactive Language Learning Platform</h3>
+              <p class="text-gray-700 mt-2">
+                An innovative web platform designed to make language acquisition engaging and effective. It features interactive exercises, AI-powered
+                pronunciation feedback.
+              </p>
+              <a
+                href="#"
+                class="mt-4 bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300 text-sm inline-block md:self-start self-center"
+                target="_blank"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
         </article>
       </section>
 
-      <section id="blog" class="blog-posts container">
-        <h2 class="blog-heading">Blog</h2>
-
-        <div class="post-list">
-          <article class="post-card">
-            <h3 class="post-title">Belajar HTML dan CSS</h3>
-            <p class="post-paragraph">
-              Pada postingan kali ini saya akan membahas tentang dasar-dasar
-              HTML dan CSS untuk pemula yang baru memulai belajar web
-              development. HTML (HyperText Markup Language) adalah bahasa markup
-              standar untuk membuat halaman web. Sedangkan CSS (Cascading Style
-              Sheets) adalah bahasa yang digunakan untuk mengatur tampilan dan
-              layout halaman web.
-            </p>
-            <a href="#" class="read-more">Baca selengkapnya...</a>
+      <section id="blog" class="max-w-7xl mx-auto px-4 md:px-6 py-16 border-b border-gray-200">
+        <header class="mb-8">
+          <h2 class="text-2xl md:text-3xl font-heading text-gray-900">Blog</h2>
+        </header>
+        <div class="flex flex-col gap-6">
+          <article class="bg-white rounded-xl shadow-md p-6 md:p-8 flex flex-col md:flex-row gap-4 items-start">
+            <figure class="w-full md:w-40 flex-shrink-0">
+              <img src="./assets/icon/html.jpg" alt="Thumb 1" class="w-full h-28 md:h-24 object-contain rounded-md" loading="lazy" />
+            </figure>
+            <div class="flex-1">
+              <header>
+                <h3 class="text-xl font-semibold text-gray-900">HTML</h3>
+              </header>
+              <p class="text-gray-700 mt-3">
+                Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It defines the content and
+                structure of web content. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.
+              </p>
+              <footer class="mt-4 flex items-center justify-between">
+                <a href="#" class="text-sm px-4 py-2 bg-accent text-white rounded-md">Read more</a>
+              </footer>
+            </div>
           </article>
 
-          <article class="post-card">
-            <h3 class="post-title">Mengenal JavaScript</h3>
-            <p class="post-paragraph">
-              JavaScript adalah bahasa pemrograman yang digunakan untuk membuat
-              halaman web menjadi interaktif. Dengan JavaScript, kita dapat
-              menambahkan elemen-elemen dinamis seperti animasi, validasi form,
-              dan lain-lain. Pada postingan kali ini, saya akan membahas
-              dasar-dasar JavaScript untuk pemula.
-            </p>
-            <a href="#" class="read-more">Baca selengkapnya...</a>
+          <article class="bg-white rounded-xl shadow-md p-6 md:p-8 flex flex-col md:flex-row gap-4 items-start">
+            <figure class="w-full md:w-40 flex-shrink-0">
+              <img src="./assets/icon/css.png" alt="Thumb 2" class="w-full h-28 md:h-24 object-contain rounded-md" loading="lazy" />
+            </figure>
+            <div class="flex-1">
+              <header>
+                <h3 class="text-xl font-semibold text-gray-900">CSS</h3>
+              </header>
+              <p class="text-gray-700 mt-3">
+                CSS, or Cascading Style Sheets, is a stylesheet language used to describe the presentation of a document written in a markup language, most
+                commonly HTML. It is a fundamental technology of the World Wide Web, working alongside HTML and JavaScript.
+              </p>
+              <footer class="mt-4 flex items-center justify-between">
+                <a href="#" class="text-sm px-4 py-2 bg-accent text-white rounded-md">Read more</a>
+              </footer>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-xl shadow-md p-6 md:p-8 flex flex-col md:flex-row gap-4 items-start">
+            <figure class="w-full md:w-40 flex-shrink-0">
+              <img src="./assets/icon/javascript.png" alt="Thumb 2" class="w-full h-28 md:h-24 object-contain rounded-md" loading="lazy" />
+            </figure>
+            <div class="flex-1">
+              <header>
+                <h3 class="text-xl font-semibold text-gray-900">JavaScript</h3>
+              </header>
+              <p class="text-gray-700 mt-3">
+                JavaScript is a programming language that conforms to the ECMAScript specification. It is high-level, often just-in-time compiled, and
+                multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+              </p>
+              <footer class="mt-4 flex items-center justify-between">
+                <a href="#" class="text-sm px-4 py-2 bg-accent text-white rounded-md">Read more</a>
+              </footer>
+            </div>
           </article>
         </div>
       </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="container">
-      <nav class="social-media" aria-label="Sosial media">
-        <ul>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/rahmat-bagus-santoso-79a58038b/"
-              target="_blank"
-              ><i class="fa fa-linkedin-square"></i> LinkedIn</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/rahmat-bagus-santoso" target="_blank"
-              ><i class="fa fa-github"></i> GitHub
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <p>&copy; Rahmat Bagus Santoso 2025 Full-Stack Software Engineering</p>
-    </footer>
+      <section id="contact" class="max-w-3xl mx-auto px-4 md:px-6 py-16">
+        <div class="bg-white rounded-xl shadow-md p-6 md:p-10">
+          <h2 class="text-2xl md:text-3xl font-heading text-gray-900 mb-4">Contact Me</h2>
+
+          <p class="text-gray-700 mb-8">
+            If you want to reach out, feel free to fill in the form below or email me directly at
+            <a href="mailto:rahmatbagussantoso@example.com" class="text-accent underline"> rahmatbagussantoso@example.com </a>.
+          </p>
+
+          <form action="#" method="post" class="space-y-6">
+            <!-- NAME -->
+            <div class="flex flex-col">
+              <label for="name" class="text-sm font-medium text-gray-800 mb-1">Fullname</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Full name…"
+                required
+                class="border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-accent focus:outline-none"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label for="email" class="text-sm font-medium text-gray-800 mb-1">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email address…"
+                required
+                class="border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-accent focus:outline-none"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label for="message" class="text-sm font-medium text-gray-800 mb-1">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Write your message here…"
+                required
+                class="border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-accent focus:outline-none"
+              ></textarea>
+            </div>
+            <button type="submit" class="mt-2 inline-block bg-accent text-white font-medium px-6 py-2 rounded-md hover:opacity-90 transition">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="text-gray-800 p-4 text-center border-t border-gray-200 bg-white/95">
+        <nav class="max-w-7xl mx-auto flex justify-center items-center py-2" aria-label="Sosial media">
+          <ul class="flex flex-col md:flex-row md:gap-4 gap-2 justify-center">
+            <li>
+              <a href="https://www.linkedin.com/in/rahmat-bagus-santoso-79a58038b/" target="_blank"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://github.com/rahmat-bagus-santoso" target="_blank"><i class="fa fa-github"></i> GitHub </a>
+            </li>
+          </ul>
+        </nav>
+        &copy; 2024 Rahmat Bagus Santoso
+      </footer>
+    </main>
   </body>
 </html>

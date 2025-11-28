@@ -1,42 +1,41 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/KTVBmApB)
 
-# Documentation
+# Personal Portfolio - Rahmat Bagus Santoso
+This is my personal portfolio website built to showcase my background, projects, and web development skills.
+This site is designed with a clean UI, responsive layout, minimalis components.
 
-[Portofolio](https://revou-fsse-oct25.github.io/milestone-1-Rahmat-Bagus-Santoso/)
+### Live Demo
+**Github Pages** https://revou-fsse-oct25.github.io/milestone-1-Rahmat-Bagus-Santoso/
 
-## Overview
-Proyek ini adalah website portofolio sederhana yang dibangun menggunakan **HTML5 semantic elements** dan **Inline CSS**
+## Features
+- Responsive Design (Mobile-first)
+- Clean and Minimalis UI
+- Hero Section with Introduction
+- About Section with short bio
+- Project Section
+- Contact Section
+- Fast Loading & Optimized images
 
-## Feature
-**Semantic HTML5** : header, nav, main, footer, h1-h3 sesuai hierarki
-**Inline CSS** : seluruh style berada pada elemen HTML
-**Sticky header** : navigasi tetap terlihat saat pengguna scroll
-**Project list** : projek yang pernah dibuat
-**Contact Form** 
+## Tech Stack
+- **HTML5**
+- **Tailwind CSS**
+- **Custom CSS**
+- **Font Awesome**
+- **Google Fonts**
+- **ChatGPT**
 
-## Tech
-**HTML5**
-**CSS**
+## Folder Structure
+```
+.
+project/
+├── index.html
+├── assets/
+│   ├── css/
+│   ├── icon/
+│   └── images/
+└── README.md
 
-# Documentation - ver 2
+```
 
-## Overview
-Proyek ini ada website portofolio sederhana versi 2 yang dibangun menggunakan **Html** dan **External CSS**
-
-## Feature
-- Responsive layout (Mobile-First - Tablet/Desktop)
-- Modular CSS (Global - per page CSS)
-- Flexbox layout
-
-## Pages
-- Index
-- About
-- Project
-- Contact
-
-## Screenshoot
-### Mobile
-![Screenshoot mobile layout](https://github.com/Revou-FSSE-Oct25/milestone-1-Rahmat-Bagus-Santoso/blob/main/asset/image/mobile.JPG)
-
-### Desktop
-![Screenshoot Desktop Layout](https://github.com/Revou-FSSE-Oct25/milestone-1-Rahmat-Bagus-Santoso/blob/main/asset/image/desktop.JPG)
+## Screenshots
+<img src="assets/images/mobile-screenshot.png" alt="mobile"/>
